@@ -11,13 +11,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.google.common.util.concurrent.Service;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-
+//@Parameters({"device", "os_version"})
 public class baseclass_gstore {
 
 	public propertiesFileUtility_gstore fLib = new propertiesFileUtility_gstore();
@@ -34,7 +35,7 @@ public class baseclass_gstore {
 		service.start();
 
 	}
-
+	  // @Parameters({"device", "os_version"})
 	@BeforeClass
 	public void beforeclass() throws IOException {
 
@@ -48,9 +49,10 @@ public class baseclass_gstore {
 		dcap.setCapability("deviceName", fLib.getcommonData_gstore("deviceName"));
 		dcap.setCapability("UDID", fLib.getcommonData_gstore("UDID"));
 
-		dcap.setCapability("appPackage", fLib.getcommonData_gstore("appPackage"));
-		dcap.setCapability("appActivity", fLib.getcommonData_gstore("appActivity"));
-
+		
+		  dcap.setCapability("appPackage", fLib.getcommonData_gstore("appPackage"));
+		  dcap.setCapability("appActivity", fLib.getcommonData_gstore("appActivity"));
+		 
 		/*
 		 * ChromeOptions options = new ChromeOptions();
 		 * options.addArguments("--disable-notifications"); // Suppress notifications
@@ -58,7 +60,7 @@ public class baseclass_gstore {
 		 * capabilities
 		 */
 		driver = new AndroidDriver(new URL(fLib.getcommonData_gstore("hostname")), dcap);
-		// driver.installApp("E:/Appium_tools/General-Store.apk");
+	//	driver.installApp("E:/Appium_tools/General-Store.apk");
 	}
 
 	@AfterClass

@@ -8,8 +8,8 @@
           <include name="beforeSuite"/>
           <include name="beforeclass"/>
           <include name="aftersuite"/>
-          <include name="addToCart"/>
           <include name="afterclass"/>
+          <include name="addToCart"/>
         </methods>
       </class> <!-- cart_gstoreTest.addToCart_gstoreTest -->
     </classes>

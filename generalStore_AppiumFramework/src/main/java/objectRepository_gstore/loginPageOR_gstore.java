@@ -22,7 +22,7 @@ public class loginPageOR_gstore {
 	private WebElement spinnerCountry;
 	
 	
-	@AndroidFindBy(uiAutomator="new UiScrollable(new UiSelector()).scrollIntoView(text(\"India\"));")
+	@AndroidFindBy(uiAutomator="new UiScrollable(new UiSelector()).scrollIntoView(text(\"Algeria\"));")
 	private WebElement scrollToCountry;
 
 	@AndroidFindBy(id="com.androidsample.generalstore:id/nameField")
