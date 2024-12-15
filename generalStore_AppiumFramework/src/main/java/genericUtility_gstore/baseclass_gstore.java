@@ -36,7 +36,7 @@ public class baseclass_gstore {
 	}
 
 	// @Parameters({"device", "os_version"})
-	 @Parameters({"name"})
+	// @Parameters({"name"})
 	@BeforeClass
 	public void beforeclass(String name) throws IOException {
 
