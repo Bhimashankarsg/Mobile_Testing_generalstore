@@ -15,7 +15,7 @@ public class addToCart_gstoreTest extends baseclass_gstore {
 	public void addToCart(String searchQuery) throws InterruptedException, IOException {
 		aLib.implicitWait(driver);
 		loginPageOR_gstore lp = new loginPageOR_gstore(driver);
-		lp.proceedToLogin(System.getProperty(searchQuery));
+		lp.proceedToLogin(searchQuery);
 		productPageOR_gstore prodpage = new productPageOR_gstore(driver);
 		prodpage.addToCart();
 
