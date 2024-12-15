@@ -31,8 +31,11 @@ public class baseclass_gstore {
 	@BeforeSuite
 	public void beforeSuite() throws IOException, InterruptedException {
 		File f = new File("C:\\Users\\BHIMASHANKAR\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js");
-		service = new AppiumServiceBuilder().withAppiumJS(f).withIPAddress("127.0.0.1").usingPort(4723)
-				.withTimeout(Duration.ofSeconds(500)).build();
+		service = new AppiumServiceBuilder().withAppiumJS(f)
+				.withIPAddress("127.0.0.1")
+				.usingPort(4723)
+				.withTimeout(Duration.ofSeconds(500))
+				.build();
 		service.start();
 		Thread.sleep(10000);
 
@@ -61,13 +64,13 @@ public class baseclass_gstore {
 		 * dcap.setCapability("goog:chromeOptions", options); // Pass ChromeOptions to
 		 * capabilities
 		 */ 
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), dcap);
+		driver = new AndroidDriver(new URL(service.getUrl().toString()), dcap);
 	//	driver.installApp("E:/Appium_tools/General-Store.apk");
 	}
 
 	@AfterClass
 	public void afterclass() {
-		driver.terminateApp("com.androidsample.generalstore");
+		//driver.terminateApp("com.androidsample.generalstore");
 	}
 
 	@AfterSuite
