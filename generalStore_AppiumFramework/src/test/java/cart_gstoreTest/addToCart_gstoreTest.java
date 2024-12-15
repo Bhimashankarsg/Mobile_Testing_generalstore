@@ -2,7 +2,6 @@ package cart_gstoreTest;
 
 import java.io.IOException;
 
-
 import org.testng.annotations.Test;
 
 import genericUtility_gstore.baseclass_gstore;
@@ -15,9 +14,8 @@ public class addToCart_gstoreTest extends baseclass_gstore {
 		aLib.implicitWait(driver);
 		loginPageOR_gstore lp = new loginPageOR_gstore(driver);
 		lp.proceedToLogin();
-		productPageOR_gstore prodpage=new productPageOR_gstore(driver);
+		productPageOR_gstore prodpage = new productPageOR_gstore(driver);
 		prodpage.addToCart();
-		
-		
+
 	}
 }

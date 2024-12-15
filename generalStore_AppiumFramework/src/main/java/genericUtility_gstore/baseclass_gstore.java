@@ -61,7 +61,7 @@ public class baseclass_gstore {
 		 * dcap.setCapability("goog:chromeOptions", options); // Pass ChromeOptions to
 		 * capabilities
 		 */
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), dcap);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), dcap);
 	//	driver.installApp("E:/Appium_tools/General-Store.apk");
 	}
 
