@@ -35,10 +35,10 @@ public class baseclass_gstore {
 
 	}
 
-	// @Parameters({"device", "os_version"})
+	 @Parameters({"deviceName", "UDID"})
 	// @Parameters({"name"})
 	@BeforeClass
-	public void beforeclass() throws IOException {
+	public void beforeclass(String deviceName,String UDID) throws IOException {
 
 		dcap = new DesiredCapabilities();
 		dcap.setCapability("platformName", fLib.getcommonData_gstore("platformName"));
@@ -47,8 +47,8 @@ public class baseclass_gstore {
 		// dcap.setCapability("browserName", "chrome");
 		dcap.setCapability("autoGrantPermissions", fLib.getcommonData_gstore("autoGrantPermissions"));
 		dcap.setCapability("noReset", fLib.getcommonData_gstore("noReset")); // Prevent clearing app data
-		dcap.setCapability("deviceName", fLib.getcommonData_gstore("deviceName"));
-		dcap.setCapability("UDID", fLib.getcommonData_gstore("UDID"));
+		dcap.setCapability("deviceName", deviceName);
+		dcap.setCapability("UDID", UDID);
 
 		dcap.setCapability("appPackage", fLib.getcommonData_gstore("appPackage"));
 		dcap.setCapability("appActivity", fLib.getcommonData_gstore("appActivity"));

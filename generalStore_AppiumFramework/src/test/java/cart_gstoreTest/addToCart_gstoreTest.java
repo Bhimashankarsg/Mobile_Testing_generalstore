@@ -10,12 +10,12 @@ import objectRepository_gstore.loginPageOR_gstore;
 import objectRepository_gstore.productPageOR_gstore;
 
 public class addToCart_gstoreTest extends baseclass_gstore {
-	 @Parameters({"searchQuery"})
+	// @Parameters({"searchQuery"})
 	@Test
-	public void addToCart(String searchQuery) throws InterruptedException, IOException {
+	public void addToCart() throws InterruptedException, IOException {
 		aLib.implicitWait(driver);
 		loginPageOR_gstore lp = new loginPageOR_gstore(driver);
-		lp.proceedToLogin(searchQuery);
+		lp.proceedToLogin("Bhimashankar");
 		productPageOR_gstore prodpage = new productPageOR_gstore(driver);
 		prodpage.addToCart();
 
