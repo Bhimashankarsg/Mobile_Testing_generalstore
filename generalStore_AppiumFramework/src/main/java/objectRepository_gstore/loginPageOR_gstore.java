@@ -51,13 +51,13 @@ public class loginPageOR_gstore {
 
 	
 	 
-	public void proceedToLogin() throws InterruptedException
+	public void proceedToLogin(String name) throws InterruptedException
 	{
 		spinnerCountry.click();
 		Thread.sleep(5000);
 		scrollToCountry.click();
 		Thread.sleep(3000);
-		nameField.sendKeys("bshankar");
+		nameField.sendKeys(name);
 		Thread.sleep(3000);
 		btnLetsShop.click();
 		
