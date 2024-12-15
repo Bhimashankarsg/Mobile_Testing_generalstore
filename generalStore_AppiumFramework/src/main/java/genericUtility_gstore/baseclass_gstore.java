@@ -38,7 +38,7 @@ public class baseclass_gstore {
 	// @Parameters({"device", "os_version"})
 	// @Parameters({"name"})
 	@BeforeClass
-	public void beforeclass(String name) throws IOException {
+	public void beforeclass() throws IOException {
 
 		dcap = new DesiredCapabilities();
 		dcap.setCapability("platformName", fLib.getcommonData_gstore("platformName"));
