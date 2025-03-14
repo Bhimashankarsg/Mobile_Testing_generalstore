@@ -35,7 +35,7 @@ public class baseclass_gstore {
 		//===========Execute windows batch command in jenkin =============
 //start /B C:\Users\BHIMASHANKAR\AppData\Roaming\npm\appium --address 127.0.0.1 --port 4723
 	//	echo Device Name %deviceName%
-
+       
 	}
 
 	 @Parameters({"deviceName", "UDID"})
