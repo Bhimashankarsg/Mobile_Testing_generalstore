@@ -52,7 +52,7 @@ public class baseclass_gstore {
 		dcap.setCapability("noReset", fLib.getcommonData_gstore("noReset")); // Prevent clearing app data
 		dcap.setCapability("deviceName", deviceName);
 		dcap.setCapability("UDID", UDID);
-
+ 
 		dcap.setCapability("appPackage", fLib.getcommonData_gstore("appPackage"));
 		dcap.setCapability("appActivity", fLib.getcommonData_gstore("appActivity"));
 
