@@ -31,7 +31,7 @@ public class baseclass_gstore {
 		service = new AppiumServiceBuilder().withAppiumJS(f).withIPAddress("127.0.0.1").usingPort(4723)
 				.withTimeout(Duration.ofSeconds(1000)).build();
 		service.start();
-		Thread.sleep(20000);   
+		//Thread.sleep(20000);   
 		//===========Execute windows batch command in jenkin =============
 //start /B C:\Users\BHIMASHANKAR\AppData\Roaming\npm\appium --address 127.0.0.1 --port 4723
 	//	echo Device Name %deviceName%
