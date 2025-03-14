@@ -32,6 +32,9 @@ public class baseclass_gstore {
 				.withTimeout(Duration.ofSeconds(500)).build();
 		service.start();
 		Thread.sleep(10000);
+		//===========Execute windows batch command in jenkin =============
+//start /B C:\Users\BHIMASHANKAR\AppData\Roaming\npm\appium --address 127.0.0.1 --port 4723
+	//	echo Device Name %deviceName%
 
 	}
 
@@ -57,9 +60,10 @@ public class baseclass_gstore {
 		 * ChromeOptions options = new ChromeOptions();
 		 * options.addArguments("--disable-notifications"); // Suppress notifications
 		 * dcap.setCapability("goog:chromeOptions", options); // Pass ChromeOptions to
-		 * capabilities
+		 * capabilities	
 		 */
-		driver = new AndroidDriver(new URL(service.getUrl().toString()), dcap);
+		//driver = new AndroidDriver(new URL(service.getUrl().toString()), dcap);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), dcap);
 		// driver.installApp("E:/Appium_tools/General-Store.apk");
 	}
 
